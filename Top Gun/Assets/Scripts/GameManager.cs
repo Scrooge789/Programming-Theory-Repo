@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager Instance; 
     public string playerName;
-    public bool isGameActive;
+    public bool isGameActive { get; set; } //// ENCAPSULATION
 
     private void Start()
     {

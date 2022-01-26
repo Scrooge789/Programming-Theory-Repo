@@ -5,18 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private float horizontalInput;
-    private float speed = 200f;
+    private float speed = 150f;
     private float xRange = 180;
-    //public GameObject projectilePrefab;
-
 
     // Update is called once per frame
     void Update()
     {
         if (Input.anyKey)
         {
-            CheckBounds();
-            MovePlayer();
+            CheckBounds(); // ABSTRACTION
+            MovePlayer(); // ABSTRACTION
         }
 
 
@@ -54,4 +52,5 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
     }
+
 }

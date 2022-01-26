@@ -24,7 +24,7 @@ public class MoveBackround : MonoBehaviour
             transform.position = startPos;
         }
         // Stop Movement when GameOver
-        if (true)//GameManager.Instance.isGameActive)
+        if (GameManager.Instance.isGameActive)
         {
             transform.Translate(-Vector3.forward * speed * Time.deltaTime);
         }
