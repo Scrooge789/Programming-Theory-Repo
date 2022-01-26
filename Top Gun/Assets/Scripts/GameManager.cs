@@ -6,6 +6,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public string playerName;
+    public bool isGameActive;
+
+    private void Start()
+    {
+        isGameActive = true;
+    }
 
     private void Awake()
     {
